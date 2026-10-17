@@ -4,16 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My GitHub Pages Lab</title>
+  <meta name="description" content="เว็บไซต์จากแลป GitHub Actions + GitHub Pages ของ มัทธิว ข่าดี">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500&family=Prompt:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card">
-    <h1>My First Auto-Deployed Website</h1>
-    <p>ชื่อ: มัทธิว ขำดี | รหัสนิสิต: 67160365</p>
-    <p id="status">Ready to deploy</p>
-    <button id="helloBtn">Say Hello</button>
+  <header class="topbar">
+    <a class="brand" href="#top">Web Dev Lab</a>
+    <nav aria-label="เมนูหลัก">
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="themeBtn" class="ghost" type="button" aria-pressed="false">🌙 Dark mode</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>My First Auto-Deployed Website</h1>
+        <p class="who">มัทธิว ข่าดี │ รหัสนิสิต 67160365</p>
+        <p id="status" class="status" aria-live="polite">ยินดีต้อนรับสู่เว็บไซต์ของฉัน!</p>
+        <button id="helloBtn" type="button">Say Hello</button>
+      </div>
+
+      <ol class="pipeline" aria-label="ขั้นตอนที่ทำให้เว็บนี้ออนไลน์">
+        <li>
+          <strong>git commit</strong>
+          <span>บันทึกเวอร์ชันของโค้ดในเครื่อง</span>
+        </li>
+        <li>
+          <strong>git push</strong>
+          <span>ส่งโค้ดขึ้น branch main</span>
+        </li>
+        <li>
+          <strong>GitHub Actions</strong>
+          <span>รัน Workflow อัตโนมัติ</span>
+        </li>
+        <li>
+          <strong>GitHub Pages</strong>
+          <span>เว็บนี้ออนไลน์แล้ว</span>
+        </li>
+      </ol>
+    </section>
+
+    <section id="about" class="block">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <p>สวัสดีครับ ผมกำลังเรียนวิชา Web Development และฝึกใช้ Git, GitHub Actions และ GitHub Pages เพื่อให้เว็บไซต์อัปเดตเองทุกครั้งที่ push โค้ด</p>
+        <dl class="facts">
+          <div><dt>กำลังเรียน</dt><dd>Web Development</dd></div>
+          <div><dt>เครื่องมือ</dt><dd>Git, VS Code, GitHub</dd></div>
+          <div><dt>เป้าหมาย</dt><dd>ทำเว็บที่ Deploy เองได้ทุกครั้งที่ push</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="skills" class="block">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li><span>HTML / CSS</span><span class="level" style="--lv:3" role="img" aria-label="ระดับ 3 จาก 5"></span></li>
+        <li><span>JavaScript พื้นฐาน</span><span class="level" style="--lv:2" role="img" aria-label="ระดับ 2 จาก 5"></span></li>
+        <li><span>Git &amp; GitHub</span><span class="level" style="--lv:3" role="img" aria-label="ระดับ 3 จาก 5"></span></li>
+        <li><span>GitHub Actions (CI/CD)</span><span class="level" style="--lv:2" role="img" aria-label="ระดับ 2 จาก 5"></span></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="block contact">
+      <h2>Contact</h2>
+      <ul class="links">
+        <li><a href="https://github.com/burgerSh">GitHub: burgerSh</a></li>
+        <li><a href="mailto:67160365@go.buu.ac.th">67160365@go.buu.ac.th</a></li>
+        <li><a href="https://burgersh.github.io/webdev-actions-lab/">burgersh.github.io/webdev-actions-lab</a></li>
+      </ul>
+    </section>
   </main>
+
+  <footer>
+    <p>เผยแพร่อัตโนมัติด้วย GitHub Actions + GitHub Pages</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
-
